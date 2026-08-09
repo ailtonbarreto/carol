@@ -1,0 +1,329 @@
+:root {
+	--bg: #000;
+	--primary-color: #060607;
+	--text-color: #fff;
+	--gold: #D7A351;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--bg);
+	margin: 0;
+	font-family: "Zalando Sans", sans-serif;
+}
+
+
+nav {
+	display: flex;
+	color: var(--text-color);
+}
+
+
+header {
+	background-color: var(--bg);
+	position: fixed;
+	width: 100%;
+	display: flex;
+	z-index: 1000;
+	padding: 0.2vw 0.5vw;
+
+	img {
+		width: 20%;
+	}
+}
+
+header #logo {
+	display: flex;
+	flex: 0 1 200px;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 0.2vw 0.5vw;
+}
+
+#openMenu,
+#closeMenu {
+	border: none;
+	background: none;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 0px 5px 0px 5px;
+	cursor: pointer;
+	display: none;
+	color: var(--text-color);
+	z-index: 1000;
+}
+
+nav {
+	justify-content: flex-end;
+	align-items: center;
+	flex: 1 1 200px;
+	z-index: 100;
+}
+
+nav a {
+	margin: 0 3%;
+	font-size: 15pt;
+	color: var(--gold);
+	font-weight: 600;
+}
+
+main {
+	flex: 20 1 500px;
+	height: 100vh;
+	background-image: url('/assets/img/cover_main.png');
+	background-size: cover;
+	background-position: center 0;
+
+
+	.tipografico {
+		position: absolute;
+		bottom: 5%;
+
+		img {
+			width: 40%;
+			height: auto;
+		}
+	}
+
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+/* SECAO SERVICOS---------------------- */
+
+.servicos, .sobre-mim {
+	margin-top: 5vw;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+	gap: 2vw;
+	text-align: center;
+	color: var(--text-color);
+}
+
+.sobre-mim {
+	margin-bottom: 4vw;
+}
+
+section h2 {
+	font-size: 2.4rem;
+	color: var(--gold);
+	font-weight: 700;
+}
+
+.servicos-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 25px;
+	padding: 2%;
+}
+
+.servico-card {
+	border: 1px solid var(--gold);
+	padding: 25px;
+	border-radius: 12px;
+	transition: 0.3s ease;
+	min-height: 15vw;
+	height: auto;
+	width: 30vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-shadow: 1px 2px 7px var(--gold);
+}
+
+.servico-card h3 {
+	color: var(--text-color);
+	margin-bottom: 15px;
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+.servico-card p {
+	color: var(--gold);
+	font-size: 0.95rem;
+	line-height: 1.5rem;
+}
+
+.sobre-card{
+	/* background-color: #025658; */
+	border: 1px solid var(--gold);
+	border-radius: 12px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 65%;
+	box-shadow: 1px 2px 7px var(--gold);
+	padding: 0.5vw;
+
+	img{
+		padding: 2vw;
+		width: 20vw;
+		border-radius: 15%;
+	}
+}
+
+.descricao{
+	position: relative;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 30vh;
+	text-align: left;
+
+	li{
+		color: var(--gold);
+		font-weight: bold;
+		line-height: 3vw;
+	}
+}
+
+.servico-card:hover {
+	transform: translateY(-6px);
+	/* background: #D7A351; */
+}
+
+/* FOOTER------------------------------------------------------------------*/
+
+footer {
+	flex: 1 1 100vw;
+	min-height: 20vh;
+	background-color: var(--gold);
+	color: var(--text-color);
+	padding: 10px;
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+.footer-column {
+	flex: 1;
+	min-width: 250px;
+	margin: 10px;
+
+	p {
+		margin: 10px 0;
+	}
+
+}
+
+/* ------------------------------------------------------------------------ */
+
+@media only screen and (max-width: 768px) {
+
+	#openMenu,
+	#closeMenu {
+		display: block;
+		color: #D7A351;
+	}
+
+	#openMenu {
+		margin-left: auto;
+	}
+
+	#closeMenu {
+		position: fixed;
+		right: 15px;
+		top: 15px;
+	}
+
+	header {
+		order: 0;
+		background: var(--primary-color);
+
+		& img {
+			max-width: 30%;
+		}
+
+		#logo{
+			padding: 0.7vw;
+		}
+	}
+
+	nav {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(5, 5, 5, 0.76);
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		display: none;
+		opacity: 0;
+		transition: 0.3s;
+	}
+
+	nav a {
+		margin: 3%;
+	}
+
+	main {
+		order: 2;
+		z-index: -1;
+		background-position: 45% center;
+
+	}
+
+	.tipografico {
+		position: absolute;
+		bottom: 20% !important;
+
+		img {
+			width: 100% !important;
+		}
+	}
+
+	.servicos-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.servico-card, .sobre-card{
+		width: 90vw;
+	}
+
+	.sobre-card{
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		padding: 5vw;
+
+		img{
+			width: 50vw;
+		}
+	}
+
+	.descricao{
+		text-align: center;
+		width: 100%;
+		height: 20vh;
+	}
+
+	li{
+		text-align: left;
+		font-size: 3vw;
+		padding: 2vw;
+	}
+
+	footer {
+		order: 4;
+	}
+}
