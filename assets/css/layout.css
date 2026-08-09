@@ -76,7 +76,7 @@ nav a {
 main {
 	flex: 20 1 500px;
 	height: 100vh;
-	background-image: url('/assets/img/cover_main.png');
+	background-image: url('assets/img/cover_main.png');
 	background-size: cover;
 	background-position: center 0;
 
