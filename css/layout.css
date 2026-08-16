@@ -124,9 +124,12 @@ section h2 {
 }
 
 .servicos-grid {
+	/* width: 100%; */
+	align-items: center;
+	text-align: center;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	gap: 25px;
+	gap: 2vw;
 	padding: 2%;
 }
 
@@ -137,7 +140,7 @@ section h2 {
 	transition: 0.3s ease;
 	min-height: 15vw;
 	height: auto;
-	width: 30vw;
+	width: 35vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -158,14 +161,13 @@ section h2 {
 }
 
 .sobre-card{
-	/* background-color: #025658; */
 	border: 1px solid var(--gold);
 	border-radius: 12px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	width: 65%;
+	width: 75%;
 	box-shadow: 1px 2px 7px var(--gold);
 	padding: 0.5vw;
 
