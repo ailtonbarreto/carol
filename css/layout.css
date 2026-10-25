@@ -76,7 +76,7 @@ nav a {
 main {
 	flex: 20 1 500px;
 	height: 100vh;
-	background-image: url("https://ailtonbarreto.github.io/carol/cover_main.png");
+	background-image: url("/cover_main.png");
 	background-size: cover;
 	background-position: center 0;
 
